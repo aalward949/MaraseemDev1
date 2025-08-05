@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables */
+:root {
+  --foreground-rgb: 31, 45, 53; /* darkAccent */
+  --background-start-rgb: 194, 184, 178; /* accent */
+  --background-end-rgb: 255, 255, 255;
+  --primary-rgb: 44, 62, 80;
+  --secondary-rgb: 191, 162, 127;
+  --accent-rgb: 194, 184, 178;
+  --dark-accent-rgb: 31, 45, 53;
+  --warm-accent-rgb: 140, 107, 69;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--dark-accent-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Lato', 'Tajawal', sans-serif;
+  line-height: 1.6;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+
+[dir="rtl"] .font-heading {
+  font-family: 'Cairo', serif;
+}
+
+[dir="rtl"] .font-body {
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgb(var(--dark-accent-rgb));
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+/* Custom Components */
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-secondary text-primary px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary/90 hover:shadow-medium focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-secondary text-secondary px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-darkAccent px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-accent/50 focus:outline-none focus:ring-2 focus:ring-warmAccent focus:ring-offset-2;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-accent/20 overflow-hidden transition-all duration-300 hover:shadow-medium;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-2xl shadow-medium border border-accent/30 overflow-hidden transition-all duration-300 hover:shadow-strong;
+  }
+
+  /* Section Styles */
+  .section {
+    @apply py-16 lg:py-24;
+  }
+
+  .section-sm {
+    @apply py-12 lg:py-16;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  /* Divider Styles */
+  .divider {
+    @apply w-full h-px bg-warmAccent/30;
+  }
+
+  .divider-thick {
+    @apply w-full h-1 bg-warmAccent;
+  }
+
+  /* Text Styles */
+  .text-gradient {
+    @apply bg-gradient-to-r from-secondary to-warmAccent bg-clip-text text-transparent;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Input Styles */
+  .input-custom {
+    @apply w-full px-4 py-3 border border-accent rounded-xl bg-white text-darkAccent placeholder-darkAccent/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300;
+  }
+
+  .textarea-custom {
+    @apply w-full px-4 py-3 border border-accent rounded-xl bg-white text-darkAccent placeholder-darkAccent/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all duration-300 resize-none;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply text-darkAccent font-medium transition-all duration-300 hover:text-secondary relative;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-secondary;
+  }
+
+  .nav-link.active::after {
+    @apply w-full;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  /* RTL Utilities */
+  .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(1);
+  }
+
+  /* Animation Utilities */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Gradient Overlays */
+  .gradient-overlay {
+    position: relative;
+  }
+
+  .gradient-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(44, 62, 80, 0.8) 0%,
+      rgba(44, 62, 80, 0.4) 100%
+    );
+    z-index: 1;
+  }
+
+  .gradient-overlay > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Scrollbar Styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgb(var(--accent-rgb));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(var(--secondary-rgb));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--warm-accent-rgb));
+  }
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 2px solid rgb(var(--secondary-rgb));
+  outline-offset: 2px;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
