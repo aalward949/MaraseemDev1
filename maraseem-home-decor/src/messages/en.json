@@ -1,0 +1,401 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "required": "Required",
+    "optional": "Optional",
+    "readMore": "Read More",
+    "readLess": "Read Less",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "bookConsultation": "Book Consultation",
+    "requestQuote": "Request Quote",
+    "viewProject": "View Project",
+    "viewAll": "View All",
+    "backToTop": "Back to Top",
+    "shareOn": "Share on",
+    "copyLink": "Copy Link",
+    "downloadPDF": "Download PDF",
+    "printPage": "Print Page"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "furniture": "Custom Furniture",
+    "projects": "Projects",
+    "materials": "Materials",
+    "news": "News",
+    "events": "Events",
+    "directory": "Business Directory",
+    "contact": "Contact",
+    "language": "Language",
+    "menu": "Menu",
+    "closeMenu": "Close Menu",
+    "skipToContent": "Skip to Content"
+  },
+  "hero": {
+    "title": "Transforming Spaces, Creating Dreams",
+    "subtitle": "Luxury Interior Design & Custom Furniture",
+    "description": "Experience the pinnacle of design excellence with Maraseem Home Decor. We create bespoke living spaces that reflect your unique style and elevate your everyday experience.",
+    "cta": {
+      "primary": "Book Free Consultation",
+      "secondary": "Explore Our Work"
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "years": "Years of Excellence",
+      "awards": "Design Awards"
+    }
+  },
+  "about": {
+    "title": "About Maraseem",
+    "subtitle": "Crafting Excellence Since 2010",
+    "description": "Maraseem Home Decor stands at the forefront of luxury interior design and custom furniture manufacturing in Saudi Arabia. Our passion for creating exceptional living spaces drives every project we undertake.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To transform ordinary spaces into extraordinary experiences through innovative design, superior craftsmanship, and unparalleled attention to detail."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the region's most trusted partner for luxury interior design, setting new standards of excellence and inspiring the future of living spaces."
+    },
+    "values": {
+      "title": "Our Values",
+      "excellence": {
+        "title": "Excellence",
+        "description": "We pursue perfection in every detail, from concept to completion."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We push boundaries and embrace new technologies and design trends."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We build trust through transparency, honesty, and reliability."
+      },
+      "craftsmanship": {
+        "title": "Craftsmanship",
+        "description": "We honor traditional techniques while embracing modern methods."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Design Solutions",
+    "description": "From concept to completion, we offer a full spectrum of interior design and custom furniture services tailored to your unique needs.",
+    "interiorDesign": {
+      "title": "Interior Design",
+      "description": "Complete interior design solutions for residential, commercial, and hospitality spaces.",
+      "residential": {
+        "title": "Residential Design",
+        "description": "Transform your home into a personalized sanctuary with our bespoke residential design services."
+      },
+      "commercial": {
+        "title": "Commercial Design",
+        "description": "Create inspiring work environments that enhance productivity and reflect your brand identity."
+      },
+      "hospitality": {
+        "title": "Hospitality Design",
+        "description": "Design memorable experiences for hotels, restaurants, and entertainment venues."
+      }
+    },
+    "customFurniture": {
+      "title": "Custom Furniture",
+      "description": "Handcrafted furniture pieces designed and manufactured to your exact specifications.",
+      "features": [
+        "Bespoke design consultation",
+        "Premium material selection",
+        "Expert craftsmanship",
+        "Quality guarantee",
+        "Delivery and installation"
+      ]
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "description": "End-to-end project management ensuring seamless execution from concept to completion.",
+      "phases": [
+        "Initial consultation and briefing",
+        "Concept development and approval",
+        "Detailed design and specifications",
+        "Procurement and manufacturing",
+        "Installation and finishing",
+        "Final inspection and handover"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Portfolio of Excellence",
+    "description": "Discover our collection of completed projects showcasing our expertise in creating exceptional spaces.",
+    "categories": {
+      "all": "All Projects",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "hospitality": "Hospitality"
+    },
+    "filters": {
+      "category": "Category",
+      "year": "Year",
+      "location": "Location",
+      "style": "Style"
+    },
+    "details": {
+      "client": "Client",
+      "location": "Location",
+      "area": "Area",
+      "duration": "Duration",
+      "year": "Year",
+      "style": "Style",
+      "services": "Services Provided",
+      "materials": "Materials Used",
+      "team": "Project Team",
+      "budget": "Budget Range",
+      "challenges": "Challenges",
+      "solutions": "Solutions",
+      "results": "Results"
+    }
+  },
+  "furniture": {
+    "title": "Custom Furniture",
+    "subtitle": "Handcrafted to Perfection",
+    "description": "Every piece of furniture we create is a unique work of art, designed specifically for your space and lifestyle.",
+    "categories": {
+      "livingRoom": "Living Room",
+      "bedroom": "Bedroom",
+      "diningRoom": "Dining Room",
+      "office": "Office",
+      "custom": "Custom Pieces"
+    },
+    "specifications": {
+      "dimensions": "Dimensions",
+      "materials": "Materials",
+      "finishes": "Finishes",
+      "features": "Features",
+      "warranty": "Warranty",
+      "delivery": "Delivery Time",
+      "installation": "Installation Included"
+    },
+    "customization": {
+      "title": "Full Customization Available",
+      "options": [
+        "Size and dimensions",
+        "Material selection",
+        "Color and finish",
+        "Hardware options",
+        "Upholstery choices",
+        "Special features"
+      ]
+    }
+  },
+  "materials": {
+    "title": "Materials Library",
+    "subtitle": "Premium Quality Materials",
+    "description": "Explore our extensive collection of premium materials sourced from around the world.",
+    "categories": {
+      "woods": "Woods",
+      "metals": "Metals",
+      "fabrics": "Fabrics",
+      "stones": "Stones",
+      "finishes": "Finishes"
+    },
+    "properties": {
+      "durability": "Durability",
+      "maintenance": "Maintenance",
+      "sustainability": "Sustainability",
+      "origin": "Origin",
+      "applications": "Applications",
+      "care": "Care Instructions"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's Create Something Amazing Together",
+    "description": "Ready to transform your space? Get in touch with our team to discuss your project and schedule a consultation.",
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Business Hours",
+      "social": "Follow Us"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "projectType": "Project Type",
+      "budgetRange": "Budget Range",
+      "preferredDate": "Preferred Date",
+      "description": "Project Description",
+      "specifications": "Specifications",
+      "quantity": "Quantity",
+      "timeline": "Timeline",
+      "requirements": "Special Requirements",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "Message Sent Successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "consultation": {
+      "title": "Book a Free Consultation",
+      "description": "Schedule a complimentary consultation with our design experts to discuss your project requirements.",
+      "duration": "Duration: 60 minutes",
+      "location": "Location: Our showroom or your space",
+      "includes": "Includes: Design assessment, material recommendations, and project timeline"
+    }
+  },
+  "news": {
+    "title": "News & Insights",
+    "subtitle": "Latest Updates from Maraseem",
+    "description": "Stay updated with our latest projects, design trends, and industry insights.",
+    "categories": {
+      "all": "All News",
+      "projects": "Project Updates",
+      "trends": "Design Trends",
+      "company": "Company News",
+      "insights": "Industry Insights"
+    },
+    "readTime": "min read",
+    "publishedOn": "Published on",
+    "author": "By",
+    "tags": "Tags",
+    "share": "Share Article",
+    "related": "Related Articles"
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Join Our Design Community",
+    "description": "Participate in our workshops, exhibitions, and networking events to stay connected with the design world.",
+    "upcoming": "Upcoming Events",
+    "past": "Past Events",
+    "register": "Register Now",
+    "details": {
+      "date": "Date",
+      "time": "Time",
+      "location": "Location",
+      "duration": "Duration",
+      "capacity": "Capacity",
+      "price": "Price",
+      "organizer": "Organizer",
+      "speakers": "Speakers",
+      "agenda": "Agenda",
+      "requirements": "Requirements"
+    }
+  },
+  "directory": {
+    "title": "Business Directory",
+    "subtitle": "Our Trusted Partners",
+    "description": "Connect with our network of trusted suppliers, contractors, and design professionals.",
+    "categories": {
+      "all": "All Partners",
+      "suppliers": "Suppliers",
+      "contractors": "Contractors",
+      "consultants": "Consultants",
+      "manufacturers": "Manufacturers"
+    },
+    "profile": {
+      "about": "About",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact Information",
+      "website": "Website",
+      "experience": "Years of Experience",
+      "location": "Location",
+      "specialties": "Specialties",
+      "certifications": "Certifications",
+      "rating": "Rating"
+    }
+  },
+  "footer": {
+    "description": "Maraseem Home Decor is your premier destination for luxury interior design and custom furniture in Saudi Arabia. We transform spaces into extraordinary experiences.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest design trends and project updates.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "success": "Successfully subscribed!",
+      "error": "Subscription failed. Please try again."
+    },
+    "copyright": "© 2024 Maraseem Home Decor. All rights reserved.",
+    "poweredBy": "Powered by"
+  },
+  "seo": {
+    "home": {
+      "title": "Maraseem Home Decor - Luxury Interior Design & Custom Furniture",
+      "description": "Transform your space with Maraseem's luxury interior design and custom furniture services in Saudi Arabia. Expert craftsmanship, innovative design, exceptional quality."
+    },
+    "about": {
+      "title": "About Maraseem - Interior Design Excellence Since 2010",
+      "description": "Learn about Maraseem Home Decor's journey, mission, and commitment to creating exceptional living spaces through innovative design and superior craftsmanship."
+    },
+    "services": {
+      "title": "Interior Design Services - Residential, Commercial & Hospitality",
+      "description": "Comprehensive interior design services including residential design, commercial spaces, custom furniture, and complete project management solutions."
+    },
+    "projects": {
+      "title": "Interior Design Projects Portfolio - Maraseem Home Decor",
+      "description": "Explore our portfolio of completed interior design projects showcasing luxury residential, commercial, and hospitality spaces across Saudi Arabia."
+    },
+    "furniture": {
+      "title": "Custom Furniture - Handcrafted Luxury Pieces",
+      "description": "Discover our collection of custom-made furniture pieces crafted with premium materials and exceptional attention to detail for every room in your home."
+    },
+    "contact": {
+      "title": "Contact Maraseem - Book Your Design Consultation",
+      "description": "Get in touch with Maraseem Home Decor to discuss your interior design project. Book a free consultation with our expert design team today."
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "action": "Return Home"
+    },
+    "500": {
+      "title": "Server Error",
+      "description": "Something went wrong on our end. Please try again later.",
+      "action": "Try Again"
+    },
+    "offline": {
+      "title": "You're Offline",
+      "description": "Please check your internet connection and try again.",
+      "action": "Retry"
+    },
+    "formValidation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number",
+      "minLength": "Minimum {min} characters required",
+      "maxLength": "Maximum {max} characters allowed",
+      "invalidFormat": "Invalid format"
+    }
+  }
+}
