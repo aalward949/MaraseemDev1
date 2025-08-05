@@ -1,0 +1,306 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "close": "Close",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "apply": "Apply",
+    "reset": "Reset",
+    "clear": "Clear",
+    "select": "Select",
+    "choose": "Choose",
+    "browse": "Browse",
+    "upload": "Upload",
+    "download": "Download",
+    "copy": "Copy",
+    "share": "Share",
+    "print": "Print",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "website": "Website",
+    "social": "Social Media",
+    "contact": "Contact",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "news": "News",
+    "events": "Events",
+    "gallery": "Gallery",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonials",
+    "team": "Team",
+    "careers": "Careers",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "sitemap": "Sitemap",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "auto": "Auto"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "furniture": "Custom Furniture",
+    "projects": "Projects",
+    "materials": "Materials",
+    "news": "News",
+    "events": "Events",
+    "directory": "Business Directory",
+    "contact": "Contact",
+    "consultation": "Book Consultation",
+    "quote": "Request Quote",
+    "admin": "Admin Panel",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile",
+    "settings": "Settings",
+    "dashboard": "Dashboard"
+  },
+  "home": {
+    "hero": {
+      "title": "Luxury Interior Design & Custom Furniture",
+      "subtitle": "Transform your space with our bespoke design solutions and handcrafted furniture",
+      "cta": "Book Consultation",
+      "ctaSecondary": "View Projects"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive interior design and furniture solutions",
+      "interiorDesign": "Interior Design",
+      "furnitureDesign": "Custom Furniture",
+      "finishingWorks": "Finishing Works",
+      "projectManagement": "Project Management"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "Discover our latest luxury interior design projects",
+      "viewAll": "View All Projects",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "hospitality": "Hospitality"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Testimonials from satisfied customers"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Space?",
+      "subtitle": "Let's create something extraordinary together",
+      "button": "Get Started Today"
+    }
+  },
+  "about": {
+    "title": "About Maraseem Home Decor",
+    "subtitle": "Crafting luxury spaces with passion and precision",
+    "story": {
+      "title": "Our Story",
+      "content": "Founded with a vision to create extraordinary living spaces, Maraseem Home Decor has been at the forefront of luxury interior design and custom furniture manufacturing for over a decade."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To deliver exceptional design experiences and handcrafted furniture that reflects our clients' unique style and enhances their quality of life."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": "Quality",
+      "qualityDesc": "Uncompromising quality in every detail",
+      "creativity": "Creativity",
+      "creativityDesc": "Innovative design solutions",
+      "craftsmanship": "Craftsmanship",
+      "craftsmanshipDesc": "Expert artisanship and attention to detail",
+      "sustainability": "Sustainability",
+      "sustainabilityDesc": "Eco-friendly materials and practices"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the talented professionals behind our success"
+    },
+    "awards": {
+      "title": "Awards & Recognition",
+      "subtitle": "Industry recognition for our excellence"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive interior design and furniture solutions",
+    "interiorDesign": {
+      "title": "Interior Design",
+      "description": "Complete interior design services for residential and commercial spaces",
+      "residential": "Residential Design",
+      "commercial": "Commercial Design",
+      "hospitality": "Hospitality Design",
+      "retail": "Retail Design"
+    },
+    "furniture": {
+      "title": "Custom Furniture",
+      "description": "Handcrafted furniture tailored to your specifications",
+      "livingRoom": "Living Room",
+      "bedroom": "Bedroom",
+      "diningRoom": "Dining Room",
+      "office": "Office",
+      "custom": "Custom Pieces"
+    },
+    "finishing": {
+      "title": "Finishing Works",
+      "description": "Premium finishing and detailing services",
+      "painting": "Painting & Wall Coverings",
+      "flooring": "Flooring",
+      "lighting": "Lighting",
+      "accessories": "Accessories"
+    },
+    "management": {
+      "title": "Project Management",
+      "description": "End-to-end project management and coordination"
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Showcasing our finest interior design and furniture projects",
+    "filters": {
+      "all": "All Projects",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "hospitality": "Hospitality",
+      "featured": "Featured"
+    },
+    "details": {
+      "location": "Location",
+      "area": "Area",
+      "duration": "Duration",
+      "budget": "Budget",
+      "services": "Services Used",
+      "materials": "Materials Used",
+      "description": "Project Description",
+      "gallery": "Project Gallery",
+      "related": "Related Projects"
+    }
+  },
+  "furniture": {
+    "title": "Custom Furniture",
+    "subtitle": "Handcrafted furniture designed for your lifestyle",
+    "categories": {
+      "livingRoom": "Living Room",
+      "bedroom": "Bedroom",
+      "diningRoom": "Dining Room",
+      "office": "Office",
+      "custom": "Custom Pieces"
+    },
+    "details": {
+      "dimensions": "Dimensions",
+      "materials": "Materials",
+      "finish": "Finish",
+      "price": "Price",
+      "delivery": "Delivery Time",
+      "warranty": "Warranty",
+      "customization": "Customization Options"
+    },
+    "quote": {
+      "title": "Request Custom Quote",
+      "description": "Get a personalized quote for your custom furniture needs"
+    }
+  },
+  "materials": {
+    "title": "Materials Library",
+    "subtitle": "Premium materials for exceptional results",
+    "categories": {
+      "woods": "Woods",
+      "metals": "Metals",
+      "fabrics": "Fabrics",
+      "stones": "Stones",
+      "finishes": "Finishes"
+    },
+    "details": {
+      "properties": "Properties",
+      "applications": "Applications",
+      "maintenance": "Maintenance",
+      "sustainability": "Sustainability"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Business Hours"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "consultation": {
+      "title": "Book a Consultation",
+      "description": "Schedule a free consultation with our design experts",
+      "projectType": "Project Type",
+      "budget": "Budget Range",
+      "timeline": "Timeline",
+      "preferredDate": "Preferred Date",
+      "description": "Project Description",
+      "submit": "Book Consultation"
+    }
+  },
+  "forms": {
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number",
+      "minLength": "Minimum {min} characters required",
+      "maxLength": "Maximum {max} characters allowed",
+      "pattern": "Please enter a valid format"
+    },
+    "messages": {
+      "success": "Form submitted successfully",
+      "error": "An error occurred. Please try again.",
+      "sending": "Sending...",
+      "sent": "Message sent successfully"
+    }
+  },
+  "footer": {
+    "description": "Luxury interior design and custom furniture solutions",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact Info",
+    "social": "Follow Us",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Subscribe to our newsletter for updates and inspiration",
+    "subscribe": "Subscribe",
+    "copyright": "© 2024 Maraseem Home Decor. All rights reserved."
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "content": "Content Management",
+    "users": "User Management",
+    "inquiries": "Inquiries",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "logout": "Logout"
+  }
+}

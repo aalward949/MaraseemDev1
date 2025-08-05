@@ -1,0 +1,390 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User Management
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  role      UserRole @default(USER)
+  password  String
+  avatar    String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  projects     Project[]
+  inquiries    Inquiry[]
+  consultations Consultation[]
+  news         News[]
+  events       Event[]
+
+  @@map("users")
+}
+
+enum UserRole {
+  ADMIN
+  MANAGER
+  DESIGNER
+  USER
+}
+
+// Content Management
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  titleAr     String
+  description String
+  descriptionAr String
+  slug        String   @unique
+  category    ProjectCategory
+  type        ProjectType
+  location    String?
+  area        Float?
+  duration    String?
+  budget      String?
+  status      ProjectStatus @default(COMPLETED)
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id])
+  images      ProjectImage[]
+  services    Service[]
+  materials   Material[]
+  tags        Tag[]
+
+  @@map("projects")
+}
+
+enum ProjectCategory {
+  RESIDENTIAL
+  COMMERCIAL
+  HOSPITALITY
+  RETAIL
+  OFFICE
+  HOTEL
+  RESTAURANT
+}
+
+enum ProjectType {
+  INTERIOR_DESIGN
+  FURNITURE_DESIGN
+  FINISHING_WORKS
+  PROJECT_MANAGEMENT
+}
+
+enum ProjectStatus {
+  PLANNING
+  IN_PROGRESS
+  COMPLETED
+  ON_HOLD
+}
+
+model ProjectImage {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String
+  altAr     String
+  order     Int      @default(0)
+  isMain    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  // Relations
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@map("project_images")
+}
+
+// Services
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  titleAr     String
+  description String
+  descriptionAr String
+  slug        String   @unique
+  category    ServiceCategory
+  icon        String?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  projects    Project[]
+  furniture   Furniture[]
+  inquiries   Inquiry[]
+
+  @@map("services")
+}
+
+enum ServiceCategory {
+  INTERIOR_DESIGN
+  FINISHING_WORKS
+  PROJECT_MANAGEMENT
+  CUSTOM_FURNITURE
+}
+
+// Furniture
+model Furniture {
+  id          String   @id @default(cuid())
+  name        String
+  nameAr      String
+  description String
+  descriptionAr String
+  slug        String   @unique
+  category    FurnitureCategory
+  subcategory String?
+  dimensions  String?
+  materials   String?
+  price       Float?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  images      FurnitureImage[]
+  services    Service[]
+  materials   Material[]
+  inquiries   Inquiry[]
+
+  @@map("furniture")
+}
+
+enum FurnitureCategory {
+  LIVING_ROOM
+  BEDROOM
+  DINING_ROOM
+  OFFICE
+  CUSTOM
+}
+
+model FurnitureImage {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String
+  altAr     String
+  order     Int      @default(0)
+  isMain    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  // Relations
+  furnitureId String
+  furniture   Furniture @relation(fields: [furnitureId], references: [id], onDelete: Cascade)
+
+  @@map("furniture_images")
+}
+
+// Materials
+model Material {
+  id          String   @id @default(cuid())
+  name        String
+  nameAr      String
+  description String
+  descriptionAr String
+  category    MaterialCategory
+  image       String?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  projects    Project[]
+  furniture   Furniture[]
+
+  @@map("materials")
+}
+
+enum MaterialCategory {
+  WOODS
+  METALS
+  FABRICS
+  STONES
+  FINISHES
+}
+
+// Tags
+model Tag {
+  id        String   @id @default(cuid())
+  name      String
+  nameAr    String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+
+  // Relations
+  projects  Project[]
+
+  @@map("tags")
+}
+
+// Inquiries and Forms
+model Inquiry {
+  id        String   @id @default(cuid())
+  type      InquiryType
+  name      String
+  email     String
+  phone     String?
+  message   String
+  status    InquiryStatus @default(NEW)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  serviceId String?
+  service   Service? @relation(fields: [serviceId], references: [id])
+  furnitureId String?
+  furniture Furniture? @relation(fields: [furnitureId], references: [id])
+
+  @@map("inquiries")
+}
+
+enum InquiryType {
+  GENERAL
+  SERVICE
+  FURNITURE
+  CONSULTATION
+  QUOTE
+}
+
+enum InquiryStatus {
+  NEW
+  CONTACTED
+  QUOTED
+  CONVERTED
+  CLOSED
+}
+
+// Consultations
+model Consultation {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String
+  projectType ProjectCategory
+  budget      String?
+  description String
+  preferredDate DateTime
+  status      ConsultationStatus @default(PENDING)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+
+  @@map("consultations")
+}
+
+enum ConsultationStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+// News and Events
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  titleAr     String
+  content     String
+  contentAr   String
+  slug        String   @unique
+  excerpt     String
+  excerptAr   String
+  image       String?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id])
+
+  @@map("news")
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  title       String
+  titleAr     String
+  description String
+  descriptionAr String
+  slug        String   @unique
+  image       String?
+  startDate   DateTime
+  endDate     DateTime
+  location    String?
+  locationAr  String?
+  capacity    Int?
+  registered  Int      @default(0)
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  organizerId String
+  organizer   User     @relation(fields: [organizerId], references: [id])
+
+  @@map("events")
+}
+
+// Business Directory
+model BusinessPartner {
+  id          String   @id @default(cuid())
+  name        String
+  nameAr      String
+  description String
+  descriptionAr String
+  category    BusinessCategory
+  logo        String?
+  website     String?
+  email       String?
+  phone       String?
+  address     String?
+  addressAr   String?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("business_partners")
+}
+
+enum BusinessCategory {
+  PARTNERS
+  SUPPLIERS
+  CONTRACTORS
+}
+
+// Settings
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+  type  String @default("string")
+
+  @@map("settings")
+}
