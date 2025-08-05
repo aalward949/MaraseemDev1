@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: maraseem_postgres
+    environment:
+      POSTGRES_DB: maraseem_db
+      POSTGRES_USER: maraseem_user
+      POSTGRES_PASSWORD: maraseem_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - maraseem_network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: maraseem_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - maraseem_network
+
+  # Next.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: maraseem_app
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://maraseem_user:maraseem_password@postgres:5432/maraseem_db
+      - REDIS_URL=redis://redis:6379
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - maraseem_network
+    command: npm run dev
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: maraseem_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - app
+    networks:
+      - maraseem_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  maraseem_network:
+    driver: bridge

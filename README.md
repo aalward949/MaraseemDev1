@@ -1,2 +1,261 @@
-# MaraseemDev1
-To create the definitive digital presence for Maraseem Home Decor, reflecting its luxury, craftsmanship, and innovation in interior design and custom furniture. The website will serve as a seamless bridge between the brand and its high-end clientele, offering inspiration, information, and direct engagement opportunities.
+# Maraseem Home Decor Website
+
+## 🌟 نظرة عامة
+
+موقع ويب فاخر ومتطور لشركة **Maraseem Home Decor** المتخصصة في التصميم الداخلي الفاخر وتصنيع الأثاث المخصص. يوفر الموقع تجربة مستخدم استثنائية مع دعم كامل للغتين العربية والإنجليزية.
+
+## ✨ الميزات الرئيسية
+
+### 🎨 التصميم والواجهة
+- **تصميم فاخر وعصري** يعكس هوية العلامة التجارية
+- **دعم كامل للغتين** (العربية والإنجليزية) مع RTL/LTR
+- **تصميم متجاوب** يعمل على جميع الأجهزة
+- **نظام ألوان مخصص** يعكس الفخامة والأناقة
+- **خطوط عربية وإنجليزية** محسنة للقراءة
+
+### 🏗️ البنية التقنية
+- **Next.js 14** مع App Router
+- **TypeScript** للتطوير الآمن
+- **Tailwind CSS** للتصميم
+- **Prisma ORM** لإدارة قاعدة البيانات
+- **PostgreSQL** كقاعدة بيانات رئيسية
+- **Next-intl** للترجمة والتدويل
+
+### 📱 الميزات الوظيفية
+- **إدارة محتوى شاملة** (CMS)
+- **معرض مشاريع تفاعلي**
+- **نظام حجز الاستشارات**
+- **طلب عروض أسعار مخصصة**
+- **مكتبة مواد تفاعلية**
+- **دليل أعمال شريك**
+- **نظام إدارة متقدم**
+
+### 🔧 الميزات التقنية
+- **SEO محسن** لمحركات البحث
+- **أداء عالي** مع تحسين الصور
+- **أمان متقدم** مع HTTPS وJWT
+- **تحليلات متقدمة** لمراقبة الأداء
+- **نسخ احتياطية تلقائية**
+
+## 🚀 البداية السريعة
+
+### المتطلبات الأساسية
+- Node.js 18+ 
+- PostgreSQL 12+
+- npm أو yarn
+
+### التثبيت
+
+1. **استنساخ المشروع**
+```bash
+git clone https://github.com/your-username/maraseem-home-decor.git
+cd maraseem-home-decor
+```
+
+2. **تثبيت التبعيات**
+```bash
+npm install
+```
+
+3. **إعداد المتغيرات البيئية**
+```bash
+cp .env.example .env.local
+# تعديل المتغيرات في .env.local
+```
+
+4. **إعداد قاعدة البيانات**
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+5. **تشغيل المشروع**
+```bash
+npm run dev
+```
+
+## 📁 هيكل المشروع
+
+```
+maraseem-home-decor/
+├── app/                    # Next.js App Router
+│   ├── [locale]/          # صفحات الموقع مع دعم اللغات
+│   ├── api/               # API Routes
+│   ├── components/        # مكونات خاصة بالتطبيق
+│   ├── globals.css        # الأنماط العامة
+│   └── layout.tsx         # التخطيط الرئيسي
+├── components/            # مكونات قابلة لإعادة الاستخدام
+│   ├── ui/               # مكونات واجهة المستخدم الأساسية
+│   ├── layout/           # مكونات التخطيط
+│   ├── forms/            # مكونات النماذج
+│   └── common/           # مكونات مشتركة
+├── lib/                  # مكتبات ووظائف مساعدة
+├── types/                # تعريفات TypeScript
+├── utils/                # وظائف مساعدة
+├── hooks/                # React Hooks مخصصة
+├── locales/              # ملفات الترجمة
+├── prisma/               # مخطط قاعدة البيانات
+├── public/               # الملفات العامة
+└── styles/               # ملفات الأنماط الإضافية
+```
+
+## 🎯 الصفحات الرئيسية
+
+### الصفحات العامة
+- **الرئيسية** - عرض الخدمات والمشاريع المميزة
+- **من نحن** - معلومات الشركة والفريق
+- **الخدمات** - تفاصيل الخدمات المقدمة
+- **المشاريع** - معرض المشاريع المنجزة
+- **الأثاث المخصص** - كتالوج الأثاث
+- **المواد** - مكتبة المواد المستخدمة
+- **الأخبار** - آخر الأخبار والتحديثات
+- **الفعاليات** - الفعاليات القادمة
+- **دليل الأعمال** - شركاء الأعمال
+- **اتصل بنا** - معلومات الاتصال والنماذج
+
+### لوحة الإدارة
+- **لوحة التحكم** - نظرة عامة على الإحصائيات
+- **إدارة المحتوى** - إدارة المشاريع والخدمات
+- **إدارة المستخدمين** - إدارة المستخدمين والصلاحيات
+- **الاستفسارات** - إدارة طلبات العملاء
+- **التحليلات** - تقارير الأداء والإحصائيات
+
+## 🌐 دعم اللغات
+
+### اللغات المدعومة
+- **العربية** (RTL) - اللغة الأساسية
+- **الإنجليزية** (LTR) - اللغة الثانوية
+
+### ميزات التدويل
+- تبديل تلقائي للاتجاه (RTL/LTR)
+- ترجمة شاملة لجميع المحتويات
+- تنسيق التواريخ والأرقام حسب اللغة
+- خطوط محسنة لكل لغة
+
+## 🎨 نظام التصميم
+
+### نظام الألوان
+```css
+/* الألوان الأساسية */
+--primary: #2C3E50;      /* Deep Slate */
+--secondary: #BFA27F;    /* Warm Gold */
+--accent: #C2B8B2;       /* Faded Khaki */
+--darkAccent: #1F2D35;   /* Charcoal */
+--warmAccent: #8C6B45;   /* Rich Brown */
+```
+
+### الخطوط
+- **العربية**: Cairo, Tajawal
+- **الإنجليزية**: Playfair Display, Inter, Lato
+
+## 🔧 التكوين
+
+### المتغيرات البيئية المطلوبة
+```env
+# قاعدة البيانات
+DATABASE_URL="postgresql://username:password@localhost:5432/maraseem_db"
+
+# Next.js
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-key"
+
+# JWT
+JWT_SECRET="your-jwt-secret"
+
+# البريد الإلكتروني
+SMTP_HOST="smtp.gmail.com"
+SMTP_PORT="587"
+SMTP_USER="your-email@gmail.com"
+SMTP_PASS="your-app-password"
+
+# Cloudinary
+CLOUDINARY_CLOUD_NAME="your-cloud-name"
+CLOUDINARY_API_KEY="your-api-key"
+CLOUDINARY_API_SECRET="your-api-secret"
+```
+
+## 📊 قاعدة البيانات
+
+### النماذج الرئيسية
+- **Users** - إدارة المستخدمين
+- **Projects** - المشاريع
+- **Services** - الخدمات
+- **Furniture** - الأثاث
+- **Materials** - المواد
+- **Inquiries** - الاستفسارات
+- **Consultations** - الاستشارات
+- **News** - الأخبار
+- **Events** - الفعاليات
+- **BusinessPartners** - شركاء الأعمال
+
+## 🚀 النشر
+
+### النشر على Vercel
+```bash
+npm run build
+vercel --prod
+```
+
+### النشر على Docker
+```bash
+docker build -t maraseem-home-decor .
+docker run -p 3000:3000 maraseem-home-decor
+```
+
+## 📈 الأداء والتحسين
+
+### تحسينات الأداء
+- تحسين الصور مع Next.js Image
+- تحميل تدريجي للمحتوى
+- ضغط الملفات الثابتة
+- تخزين مؤقت ذكي
+
+### تحسينات SEO
+- Meta tags ديناميكية
+- Schema markup
+- Sitemap تلقائي
+- تحسين للبحث المحلي
+
+## 🔒 الأمان
+
+### ميزات الأمان
+- HTTPS إجباري
+- حماية من CSRF
+- تحقق من المدخلات
+- تشفير كلمات المرور
+- JWT للجلسات
+
+## 🤝 المساهمة
+
+### كيفية المساهمة
+1. Fork المشروع
+2. إنشاء فرع للميزة الجديدة
+3. تطوير الميزة
+4. إضافة الاختبارات
+5. إنشاء Pull Request
+
+### معايير الكود
+- استخدام TypeScript
+- اتباع معايير ESLint
+- كتابة تعليقات واضحة
+- اختبار الكود قبل الإرسال
+
+## 📝 الترخيص
+
+هذا المشروع مرخص تحت رخصة MIT. راجع ملف `LICENSE` للتفاصيل.
+
+## 📞 الدعم
+
+### معلومات الاتصال
+- **البريد الإلكتروني**: info@maraseem.com
+- **الهاتف**: +966-XX-XXX-XXXX
+- **الموقع**: المملكة العربية السعودية
+
+### التوثيق
+- [دليل المطور](./docs/developer-guide.md)
+- [دليل النشر](./docs/deployment-guide.md)
+- [دليل API](./docs/api-reference.md)
+
+---
+
+**تم تطوير هذا المشروع بحب وإتقان لـ Maraseem Home Decor** 🏠✨
